@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-06-26T01:45:08.540Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="kzjHACbWl6MgA6BLVrrF" version="13.3.5" type="github">
+<mxfile host="app.diagrams.net" modified="2020-06-26T01:45:40.100Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36" etag="3OrRlhNf-3bqs7eUrVRj" version="13.3.5" type="github">
   <diagram id="giBby2Mf2WS-jyfLYsK2" name="Page-1">
-    <mxGraphModel dx="1950" dy="3659" grid="1" gridSize="1" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="1" shadow="0" extFonts="cmr10^https://github.com/iteal/wormpose_figures/blob/master/fonts/cmr10.ttf">
+    <mxGraphModel dx="546" dy="2706" grid="1" gridSize="1" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="1" shadow="0" extFonts="cmr10^https://github.com/iteal/wormpose_figures/blob/master/fonts/cmr10.ttf">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -125,10 +125,10 @@
           <mxGeometry x="1268" y="120" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_OTTNVIKz6faZCm73oCE-7" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;0.2&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontSize=21;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="892" y="-47.5" width="41" height="20" as="geometry" />
+          <mxGeometry x="892" y="-48.5" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_OTTNVIKz6faZCm73oCE-8" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;0.1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontSize=21;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="892" y="24" width="41" height="20" as="geometry" />
+          <mxGeometry x="892" y="22" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_OTTNVIKz6faZCm73oCE-9" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;0.0&lt;br style=&quot;font-size: 21px;&quot;&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontSize=21;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="892" y="96.5" width="41" height="20" as="geometry" />
@@ -137,10 +137,10 @@
           <mxGeometry x="892" y="-263" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_OTTNVIKz6faZCm73oCE-11" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;0.1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontSize=21;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="892" y="-191.5" width="41" height="20" as="geometry" />
+          <mxGeometry x="892" y="-194.5" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="_OTTNVIKz6faZCm73oCE-12" value="&lt;font style=&quot;font-size: 21px;&quot;&gt;0.0&lt;br style=&quot;font-size: 21px;&quot;&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontSize=21;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="892" y="-119" width="41" height="20" as="geometry" />
+          <mxGeometry x="892" y="-121" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="iFIiS9CumEZQT3zkeVrI-1" value="&lt;font style=&quot;font-size: 50px&quot;&gt;A&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="146" y="-344" width="40" height="20" as="geometry" />
