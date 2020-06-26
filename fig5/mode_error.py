@@ -33,7 +33,7 @@ def plot_all_modes(no_text=False):
 
     for i in range(4):
         ax = axes[(int)(i / 2), i % 2]
-        plot_mode_error(me_n2new[:,i], ax, i, label="new_n2")
+        plot_mode_error(me[:,i], ax, i)
 
     for ax in fig.get_axes():
         ax.label_outer()
