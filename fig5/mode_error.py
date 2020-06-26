@@ -6,7 +6,7 @@ me = np.loadtxt("data/N2/modes_error.txt")
 
 def plot_all_modes(no_text=False):
     xlim = 1
-    ylim = 0.25
+    ylim = 0.3
     axes_color = "black"
 
     def plot_mode_error(err, ax, index, label):
