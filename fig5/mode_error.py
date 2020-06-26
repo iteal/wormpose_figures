@@ -11,9 +11,9 @@ def plot_all_modes(no_text=False):
     ylim = 0.3
     axes_color  = "black"
 
-    def plot_mode_error(err, ax, index, label):  
+    def plot_mode_error(err, ax, index):
         weights = np.ones_like(err)/float(len(err))
-        ax.hist(err, bins=np.arange(0,xlim,0.05), weights=weights, label=label, alpha=0.7)
+        ax.hist(err, bins=np.arange(0,xlim,0.05), weights=weights, alpha=0.7)
         if not no_text:
             ax.title.set_text(f"a_{index+1}")
         ax.spines['bottom'].set_color(axes_color)
