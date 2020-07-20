@@ -8,7 +8,7 @@ import shutil
 from wormpose.dataset.image_processing.simple_frame_preprocessing import SimpleFramePreprocessing
 
 
-def make_gif(root_path: str, fps: int):
+def make_gif(root_path: str, fps: int, rescale: float):
 
     temp_d = tempfile.mkdtemp()
 
@@ -19,6 +19,10 @@ def make_gif(root_path: str, fps: int):
 
     for f in files:
         im = cv2.imread(f)
+
+        if rescale != 1.:
+            im = cv2.resize(im, None, fx=rescale, fy=rescale)
+
         segmentation_mask, _ = sp.process(cv2.cvtColor(im, cv2.COLOR_BGR2GRAY))
 
         where_worm = np.where(segmentation_mask != 0)
@@ -52,6 +56,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("root_path", type=str, help="Root folder of results images")
     parser.add_argument("--fps", type=int, help="frames per sec", default=20)
+    parser.add_argument("--rescale", type=float, help="resize", default=1)
     args = parser.parse_args()
 
     make_gif(**vars(args))
