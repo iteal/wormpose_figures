@@ -49,7 +49,7 @@ all_mode_errors = np.array(all_mode_errors)
 
 def plot_all_modes(no_text=False):
     xlim = 15
-    ylim = 0.3
+    ylim = 0.25
     axes_color = "black"
 
     def plot_mode_error(err, ax, index, label):
@@ -67,8 +67,8 @@ def plot_all_modes(no_text=False):
     fig, axes = plt.subplots(2, 2, gridspec_kw={'hspace': 0, 'wspace': 0})
 
     plt.setp(axes,
-           #  xticks=np.arange(0, xlim, 0.5).tolist() + [xlim],
-           #  yticks=np.arange(0, ylim, 0.1).tolist() + [ylim],
+             xticks=np.arange(0, xlim, 5).tolist() + [xlim],
+             yticks=np.arange(0, ylim, 0.1).tolist() + [ylim],
              ylim=[0, ylim],
              xlim=[0, xlim])
 
