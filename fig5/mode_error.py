@@ -23,7 +23,7 @@ def plot_all_modes(modes_errors, no_text=False):
     fig, axes = plt.subplots(2, 2, gridspec_kw={'hspace': 0, 'wspace': 0})
 
     plt.setp(axes,
-             xticks=np.arange(0, xlim, 0.5).tolist() + [xlim],
+             xticks=np.arange(0, xlim, 1).tolist() + [xlim],
              yticks=np.arange(0, ylim, 0.1).tolist() + [ylim],
              ylim=[0, ylim],
              xlim=[0, xlim])
