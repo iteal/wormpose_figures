@@ -1,4 +1,4 @@
-import urllib
+import urllib.request
 import os
 import cv2
 import numpy as np
@@ -16,7 +16,7 @@ if __name__ == "__main__":
         )
 
     NUM_MODES = 4
-    MODE_ERROR = 0.5
+    MODE_ERROR = 1.0
     REFERENCE = np.zeros(NUM_MODES)
 
     WORN_LENGTH = 1000
