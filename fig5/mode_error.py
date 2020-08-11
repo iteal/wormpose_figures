@@ -1,17 +1,16 @@
 import numpy as np
+import sys
 import matplotlib.pyplot as plt
 
-me = np.loadtxt("data/N2/modes_error.txt")
 
-
-def plot_all_modes(no_text=False):
-    xlim = 1
-    ylim = 0.3
+def plot_all_modes(modes_errors, no_text=False):
+    xlim = 3
+    ylim = 0.2
     axes_color = "black"
 
     def plot_mode_error(err, ax, index, label):
         weights = np.ones_like(err) / float(len(err))
-        ax.hist(err, bins=np.arange(0, xlim, 0.05), weights=weights, label=label, alpha=0.7)
+        ax.hist(err, bins=np.arange(0, xlim, 0.1), weights=weights, label=label, alpha=0.7)
         if not no_text:
             ax.title.set_text(f"a_{index + 1}")
         ax.spines['bottom'].set_color(axes_color)
@@ -31,7 +30,7 @@ def plot_all_modes(no_text=False):
 
     for i in range(4):
         ax = axes[(int)(i / 2), i % 2]
-        plot_mode_error(me[:, i], ax, i, label="")
+        plot_mode_error(modes_errors[:, i], ax, i, label="")
 
     for ax in fig.get_axes():
         ax.label_outer()
@@ -45,5 +44,11 @@ def plot_all_modes(no_text=False):
     plt.show()
 
 
-plot_all_modes(no_text=True)
-plot_all_modes(no_text=False)
+if __name__ == "__main__":
+
+    modes_errors_path = sys.argv[1]
+
+    modes_errors = np.loadtxt(modes_errors_path)
+
+    plot_all_modes(modes_errors, no_text=True)
+    plot_all_modes(modes_errors, no_text=False)
