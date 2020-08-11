@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_all_modes(modes_errors, no_text=False):
-    xlim = 3
+    xlim = 2.5
     ylim = 0.2
     axes_color = "black"
 
