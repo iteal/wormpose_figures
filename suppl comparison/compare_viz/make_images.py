@@ -42,6 +42,19 @@ def make_images(root_path: str):
 
         im_seg = im[roi_coord]
         img_path = os.path.join(out_dir, os.path.basename(f))
+
+        only_worm = (im_seg[:,:,0] == im_seg[:,:,1]) & (im_seg[:,:,1] == im_seg[:,:,2]) & (im_seg[:,:,0] > 0)
+
+        worm_colors = im_seg[only_worm]
+
+        min_val = np.min(worm_colors[worm_colors>0])
+        max_val = np.max(worm_colors[worm_colors>0])
+
+        spread_histo = ((im_seg[:,:,0].astype(float) - min_val)/(max_val - min_val)*200 + 50).astype(np.uint8)
+        im_seg[:,:,0][only_worm] = spread_histo[only_worm]
+        im_seg[:, :, 1][only_worm] = spread_histo[only_worm]
+        im_seg[:, :, 2][only_worm] = spread_histo[only_worm]
+
         cv2.imwrite(os.path.join(out_dir, os.path.basename(f)), im_seg)
 
         cmd = f"convert \"{img_path}\" -transparent black \"{img_path}\""
