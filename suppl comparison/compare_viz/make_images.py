@@ -18,12 +18,13 @@ def make_images(root_path: str):
     files = list(sorted(glob.glob(os.path.join(root_path, "*.png"))))
 
     sp = SimpleFramePreprocessing()
-    out_shape = np.array((200, 200))
+    out_shape = np.array((150, 150))
 
     for f in files:
         im = cv2.imread(f)
 
         segmentation_mask, _ = sp.process(cv2.cvtColor(im, cv2.COLOR_BGR2GRAY))
+        im[segmentation_mask == 0] = 0
 
         where_worm = np.where(segmentation_mask != 0)
         worm_roi = np.s_[
