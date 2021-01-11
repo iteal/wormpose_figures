@@ -1,11 +1,11 @@
 import numpy as np
 import sys
+import os
 import matplotlib.pyplot as plt
 
 
-def plot_all_modes(modes_errors, no_text=False):
-    xlim = 2.5
-    ylim = 0.2
+def plot_all_modes(modes_errors, out_dir, no_text=False, name="", xlim=2.3, ylim=0.3):
+
     axes_color = "black"
 
     def plot_mode_error(err, ax, index, label):
@@ -39,9 +39,8 @@ def plot_all_modes(modes_errors, no_text=False):
             ax.set_yticklabels([])
 
     suffix = "" if no_text else "_with_text"
-    plt.savefig(f"mode_error{suffix}.svg", bbox_inches='tight', pad_inches=0)
+    plt.savefig(os.path.join(out_dir, f"mode_error_{name}_{suffix}.svg"), bbox_inches='tight', pad_inches=0)
 
-    plt.show()
 
 
 if __name__ == "__main__":
@@ -50,5 +49,6 @@ if __name__ == "__main__":
 
     modes_errors = np.loadtxt(modes_errors_path)
 
-    plot_all_modes(modes_errors, no_text=True)
-    plot_all_modes(modes_errors, no_text=False)
+    plot_all_modes(modes_errors, out_dir=".", no_text=True)
+
+    plot_all_modes(modes_errors, out_dir=".", no_text=False)
