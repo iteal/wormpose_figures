@@ -1,4 +1,5 @@
 import os
+import shutil
 import urllib.request
 import sys
 import numpy as np
@@ -41,8 +42,10 @@ if __name__ == "__main__":
     theta_predictions = sys.argv[2]
 
     outdir = "fig5_mode_error"
-    if not os.path.exists(outdir):
-        os.mkdir(outdir)
+    if os.path.exists(outdir):
+        shutil.rmtree(outdir)
+
+    os.mkdir(outdir)
 
     modes_labels = convert_to_modes(theta_labels)
     modes_predictions = convert_to_modes(theta_predictions)
@@ -52,10 +55,13 @@ if __name__ == "__main__":
 
     mode_error = np.abs(modes_labels - modes_predictions)
 
-    tosave = {'all': mode_error, 'coiled': mode_error[coiled], 'uncoiled': mode_error[uncoiled]}
+    tosave = {'all': mode_error,
+              'coiled': mode_error[coiled],
+              'uncoiled': mode_error[uncoiled]}
+    show_median = {'all': False, 'coiled': True, 'uncoiled': True}
 
     for name, vals in tosave.items():
         save_mode_error(vals, out_dir=outdir, name=name)
-        plot_all_modes(vals, out_dir=outdir, name=name, no_text=False)
-        plot_all_modes(vals, out_dir=outdir, name=name, no_text=True)
+        plot_all_modes(vals, out_dir=outdir, name=name, no_text=False, show_median=show_median[name])
+        plot_all_modes(vals, out_dir=outdir, name=name, no_text=True, show_median=show_median[name])
 

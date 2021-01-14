@@ -4,11 +4,11 @@ import os
 import matplotlib.pyplot as plt
 
 
-def plot_all_modes(modes_errors, out_dir, no_text=False, name="", xlim=2.3, ylim=0.3):
+def plot_all_modes(modes_errors, out_dir, no_text=False, name="", xlim=2.3, ylim=0.3, show_median=False):
 
     axes_color = "black"
 
-    def plot_mode_error(err, ax, index, label):
+    def plot_mode_error(err, ax, index, label, show_median):
         weights = np.ones_like(err) / float(len(err))
         ax.hist(err, bins=np.arange(0, xlim, 0.1), weights=weights, label=label, alpha=0.7)
         if not no_text:
@@ -20,6 +20,10 @@ def plot_all_modes(modes_errors, out_dir, no_text=False, name="", xlim=2.3, ylim
         ax.tick_params(axis='x', colors=axes_color)
         ax.tick_params(axis='y', colors=axes_color)
 
+        if show_median:
+            median = np.median(err)
+            ax.axvline(x=median, color='k', linestyle='--', linewidth=1)
+
     fig, axes = plt.subplots(2, 2, gridspec_kw={'hspace': 0, 'wspace': 0})
 
     plt.setp(axes,
@@ -30,7 +34,7 @@ def plot_all_modes(modes_errors, out_dir, no_text=False, name="", xlim=2.3, ylim
 
     for i in range(4):
         ax = axes[(int)(i / 2), i % 2]
-        plot_mode_error(modes_errors[:, i], ax, i, label="")
+        plot_mode_error(modes_errors[:, i], ax, i, label="", show_median=show_median)
 
     for ax in fig.get_axes():
         ax.label_outer()
