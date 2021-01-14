@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-01-14T02:43:12.793Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="sLFMH_nqwc9bGwXmIA5Z" version="14.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-01-14T02:43:48.684Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36" etag="oEc5qI_VnDY2GSMts12W" version="14.2.2" type="github">
   <diagram id="giBby2Mf2WS-jyfLYsK2" name="Page-1">
-    <mxGraphModel dx="2076" dy="3496" grid="1" gridSize="1" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="1" shadow="0" extFonts="cmr10^https://github.com/iteal/wormpose_figures/blob/master/fonts/cmr10.ttf">
+    <mxGraphModel dx="2595" dy="3786" grid="1" gridSize="1" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="1" shadow="0" extFonts="cmr10^https://github.com/iteal/wormpose_figures/blob/master/fonts/cmr10.ttf">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -89,7 +89,7 @@
           <mxGeometry x="803" y="120" width="40" height="20" as="geometry" />
         </mxCell>
         <mxCell id="2lck-LCYh8f1ODA0Fh-E-6" value="&lt;font style=&quot;font-size: 27px;&quot;&gt;$$\delta a_{i}$$&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;overflow=fill;fontSize=27;fontFamily=cmr10;fontColor=#000000;" parent="1" vertex="1">
-          <mxGeometry x="1228" y="119" width="151" height="80" as="geometry" />
+          <mxGeometry x="1228" y="118" width="151" height="80" as="geometry" />
         </mxCell>
         <mxCell id="2lck-LCYh8f1ODA0Fh-E-7" value="&lt;font style=&quot;font-size: 27px;&quot;&gt;mode error&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;fontFamily=cmr10;fontColor=#000000;fontSize=27;" parent="1" vertex="1">
           <mxGeometry x="1088" y="150" width="251" height="20" as="geometry" />
@@ -302,7 +302,7 @@
           <mxGeometry x="845" y="187" width="41" height="20" as="geometry" />
         </mxCell>
         <mxCell id="9J_fL6Jl7Mc-y7SQWoCs-49" value="&lt;font style=&quot;font-size: 27px;&quot;&gt;$$\delta a_{i}$$&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;opacity=50;overflow=fill;fontSize=27;fontFamily=cmr10;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="513" y="729" width="151" height="80" as="geometry" />
+          <mxGeometry x="528" y="651" width="151" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
