@@ -50,7 +50,7 @@ if __name__ == "__main__":
     modes_labels = convert_to_modes(theta_labels)
     modes_predictions = convert_to_modes(theta_predictions)
 
-    coiled = np.abs(modes_labels[:, 2]) > 10
+    coiled = np.abs(modes_labels[:, 2]) > 15
     uncoiled = ~coiled
 
     mode_error = np.abs(modes_labels - modes_predictions)
